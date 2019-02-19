@@ -68,6 +68,10 @@ func NewCmdMerge(streams genericclioptions.IOStreams) *cobra.Command {
 				return nil
 			}
 
+			if len(args) == 0 {
+				return c.Usage()
+			}
+
 			if err := o.Parse(c, args); err != nil {
 				return err
 			}
@@ -95,10 +99,6 @@ func NewCmdMerge(streams genericclioptions.IOStreams) *cobra.Command {
 
 func (o *MergeOptions) Parse(cmd *cobra.Command, args []string) error {
 	o.kubeconfigs = args
-
-	if len(o.kubeconfigs) == 0 {
-		return cmd.Usage()
-	}
 
 	if len(o.kubeconfigs) < 1 && o.home {
 		return fmt.Errorf("either one or more arguments are allowed")
