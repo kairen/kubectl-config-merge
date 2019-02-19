@@ -7,6 +7,8 @@ ORG := github.com
 OWNER := kairen
 REPOPATH ?= $(ORG)/$(OWNER)/kubectl-config-merge
 
+GOOS ?= $(shell go env GOOS)
+
 $(shell mkdir -p ./out)
 
 .PHONY: build
