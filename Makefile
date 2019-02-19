@@ -8,15 +8,15 @@ OWNER := kairen
 REPOPATH ?= $(ORG)/$(OWNER)/kubectl-config-merge
 
 GOOS ?= $(shell go env GOOS)
+GOARCH ?= $(shell go env GOARCH)
 
 $(shell mkdir -p ./out)
 
 .PHONY: build
-build: out/config-merge
+build: out/config-merge-$(GOOS)-$(GOARCH)
 
-.PHONY: out/config-merge
-out/config-merge: 
-	CGO_ENABLED=0 GOOS=$(GOOS) go build \
+out/config-merge-%-$(GOARCH): 
+	CGO_ENABLED=0 GOOS=$* GOARCH=$(GOARCH) go build \
 	  -ldflags="-s -w -X $(REPOPATH)/pkg/version.version=$(VERSION)" \
 	  -a -o $@ cmd/kubectl-config-merge.go
 
