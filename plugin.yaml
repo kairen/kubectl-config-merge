@@ -1,0 +1,3 @@
+name: "config-merge"
+shortDesc: "Merge two or more kubeconfig files"
+command: "./config-merge"
