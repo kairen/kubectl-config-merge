@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/kairen/kubectl-config-merge.svg?branch=master)](https://travis-ci.org/kairen/kubectl-config-merge)
+[![Build Status](https://travis-ci.org/kubedev/kubectl-config-merge.svg?branch=master)](https://travis-ci.org/kubedev/kubectl-config-merge)
 
 # kubectl-config-merge
 This repository implements a kubectl plugin for merging multiple kubeconfig files.

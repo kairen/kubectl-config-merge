@@ -4,7 +4,7 @@ VERSION_BUILD ?= 0
 VERSION ?= v$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_BUILD)
 
 ORG := github.com
-OWNER := kairen
+OWNER := kubedev
 REPOPATH ?= $(ORG)/$(OWNER)/kubectl-config-merge
 
 GOOS ?= $(shell go env GOOS)
