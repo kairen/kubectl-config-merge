@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/kairen/kubectl-config-merge/pkg/cmd"
+	"github.com/kubedev/kubectl-config-merge/pkg/cmd"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 )
 

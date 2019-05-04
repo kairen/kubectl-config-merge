@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/ghodss/yaml"
-	"github.com/kairen/kubectl-config-merge/pkg/constants"
-	"github.com/kairen/kubectl-config-merge/pkg/utils"
-	"github.com/kairen/kubectl-config-merge/pkg/version"
+	"github.com/kubedev/kubectl-config-merge/pkg/constants"
+	"github.com/kubedev/kubectl-config-merge/pkg/utils"
+	"github.com/kubedev/kubectl-config-merge/pkg/version"
 	"github.com/spf13/cobra"
 
 	"k8s.io/apimachinery/pkg/runtime"
