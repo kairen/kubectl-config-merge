@@ -38,3 +38,6 @@ Flags:
       --version         Show config-merge version
       --view            View merged kubeconfig result
 ```
+
+## How to install kubectl plugins
+You can read instructions here on how to install this plugin: https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/
